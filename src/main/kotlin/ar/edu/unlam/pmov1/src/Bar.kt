@@ -1,10 +1,22 @@
+package ar.edu.unlam.pmov1.src
+
 class Bar() {
     private val clientesDentro: MutableSet<Cliente>
     private var abierto: Boolean
+    private var nombre: String?
 
     init {
         abierto = false
         clientesDentro = mutableSetOf()
+        nombre = null
+    }
+
+    fun getNombre(): String?{
+        return this.nombre
+    }
+
+    fun setNombre(nombre: String){
+        this.nombre = nombre
     }
 
     fun estaAbierto(): Boolean {
